@@ -38,13 +38,13 @@ def home():
 def search():
 	picture = request.files['image']  # taking image query from the user 
 	file = picture.read()
-
+	print("file_read")
 	cd = ColorDescriptor((8, 12, 3))  # 8, 12, 3 are the no. of bins
 	npimg = np.frombuffer(file, np.uint8) # unsigned integer of 8 bit
 	query = cv2.imdecode(npimg, cv2.IMREAD_COLOR) # decode image query using cv2
 	
 	features = cd.describe(query) # extract features from query
-	 
+	print("searching")
 	searcher = Searcher('index.csv')
 	results = searcher.search(features) # search for similar features 
 

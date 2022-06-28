@@ -64,7 +64,7 @@
                     {% for turget in target %}
                     <div class="row">
                       <div class="col-xl-12">
-                        <img src="static/tmp/{{turget}}">
+                        <img  width="300" height="300" src="static/tmp/{{turget}}">
                     </div>
                     </div>
                     {% endfor %}
@@ -98,7 +98,7 @@
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">The Best Value</h5>
-                      <span class="h2 font-weight-bold mb-0">{{ nearest[-0:-6] }}</span>
+                      <span class="h2 font-weight-bold mb-0">{{ nearest[0:3] }}</span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-success text-white rounded-circle shadow">
@@ -142,8 +142,8 @@
                         <tr>
                           <td>{{ count.value }}</td>
                           {% set count.value = count.value + 1 %}
-                          <td><img class="img-responsive" src="static/temp/{{image_name}}"></td>
-                          <td>{{image_name[-0:-6]}}</td>
+                          <td><img  width="500" height="500" src="static/temp/{{image_name}}"></td>
+                          <td>{{article_links[count.value - 1]}}</td>
                         </tr>
                     {% endfor %}
                   </tbody>

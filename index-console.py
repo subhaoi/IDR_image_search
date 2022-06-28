@@ -13,7 +13,7 @@ for imagePath in glob.glob("static/images/*"):  # loops over every image in imag
 	
 	print(imagePath)
 	features = cd.describe(image) # this returns the features 
- 
+	print(imageID)
 	features = [str(f) for f in features]  # features converted individually to string for join operation in next line 
 	output.write("%s,%s\n" % (imageID, ",".join(features)))
  
